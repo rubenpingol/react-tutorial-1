@@ -5,6 +5,10 @@ import Form from './Form';
 class App extends Component {
 
     state = {
+        selectedCharacter: {
+          name: null,
+          job: null
+        },
         characters: []
     };
 
@@ -19,6 +23,12 @@ class App extends Component {
                 <Form handleSubmit={this.handleSubmit} />
             </div>
         );
+    }
+
+    editCharacter = index => {
+      const { characters } = this.state;
+      
+      
     }
 
     removeCharacter = index => {
